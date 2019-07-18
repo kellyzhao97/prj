@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Simple Bar chart</title>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+    }
+
+    .axis {
+      font-size: 13px;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      display: none;
+    }
+
+    .label {
+      font-size: 13px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="graphic"></div>
+
+  <script>
+    //set up svg using margin conventions - we'll need plenty of room on the left for labels
+    var margin = {
+      top: 15,
+      right: 25,
+      bottom: 15,
+      left: 60
+    };
+
+    var width = 960 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom;
+
+    var svg = d3.select("#graphic").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.csv("data3.csv", function (error, data) {
+      if (error) {
+        throw error;
+      }
+      var x = d3.scale.linear()
+        .range([0, width])
+        .domain([0, 50]);
+
+      var bars = svg.selectAll(".bar")
+        .data(data)
+        .enter()
+        .append("g")
+
+      //append rects
+      bars.append("rect")
+        .attr("class", "bar")
+        .attr("y", 100)
+        .attr("height", 100)
+        .attr("x", function (d) {
+          return x(d.start)
+        })
+        .attr("width", function (d) {
+          return x(d.interval);
+        })
+        .attr('fill', '#008B45')
+        .style("opacity",function(d, i) {return d.value});
+    });
+
+  </script>
+
+</body>
+
+</html>
