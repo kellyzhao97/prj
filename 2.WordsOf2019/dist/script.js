@@ -22,8 +22,4 @@ $('nav a').click(function(e) {
     $('.privacy').removeClass('noshow');
     $('.upbox').children().not('.privacy').addClass('noshow');
   }
-  else if(this.id === 'settings') {
-    $('.settings').removeClass('noshow');
-    $('.rightupboxbox').children().not('.settings').addClass('noshow');
-  }
 });

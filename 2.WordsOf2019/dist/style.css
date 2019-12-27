@@ -12,17 +12,6 @@ body {
   box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
 }
 
-.logo {
-  float: right;
-  margin-right: 12px;
-  margin-top: 12px;
-  font-family: "Nunito Sans", sans-serif;
-  color: #e2e2e5;
-  font-weight: 900;
-  font-size: 1.5em;
-  letter-spacing: 1px;
-}
-
 .bottombox {
   float: bottom;
   bottom:0;
@@ -31,18 +20,20 @@ body {
   height: 8%;
   background: #4a69bd;
   box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5);
+  font-family: STKaiti;
 }
 
 nav a {
   list-style: none;
   color: #FFFFFF;
-  font-size: 1.1em;
+  font-size: 1.01em;
   display: inline-block;
-  padding: 40px 55px;
+  padding: 30px 30px;
+  transition: all .3s ease-in-out;
 }
 nav a:hover {
   color: #0c2461;
-  transform: scale(1.5);
+  transform: scale(1.2);
   cursor: pointer;
 }
 
@@ -52,19 +43,19 @@ nav a:hover {
 
 .upbox {
   float: right;
-  width: 80%;
+  width: 90%;
   height: 100%;
   margin-top: 1.4em;
 }
 
-.profile, .payment, .subscription, .privacy, .settings {
+.profile, .payment, .subscription, .privacy {
   transition: opacity .5s ease-in;
   position: absolute;
   width: 70%;
 }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: STKaiti;
   color: #34495e;
   font-size: 1.4em;
   margin-top: 0;
@@ -91,21 +82,6 @@ p {
   padding: 2px 0;
   color: #070707;
 }
-
-.profile, .payment, .subscription, .privacy {
-  transition: opacity .5s ease-in;
-  position: absolute;
-  width: 70%;
-}
-
-.privacy h2 {
-  margin-top: 40px;
-}
-
-.settings h2 {
-  margin-top: 40px;
-}
-
 .noshow {
   opacity: 0;
 }
