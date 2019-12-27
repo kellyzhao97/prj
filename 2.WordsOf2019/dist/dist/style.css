@@ -1,0 +1,164 @@
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+body {
+  background: white;
+}
+
+.container {
+  background: #FFFFFF;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
+}
+
+.bottombox {
+  background: #4a69bd;
+  box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5);
+}
+
+.navbar {
+  padding-left: 6px;
+  font-family: cursive;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  color: white;
+}
+
+.main-nav li {
+  text-align: left;
+  margin: 1em auto;
+}
+
+.logo {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 70px;
+      align-items: center;
+  }
+
+  .main-nav {
+      display: flex;
+      margin-right: 30px;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+
+  .main-nav li {
+      margin: 0;
+  }
+
+  .nav-links {
+      margin-left: 40px;
+  }
+
+  .logo {
+      margin-top: 0;
+  }
+
+  .navbar-toggle {
+      display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+      color: rgba(255, 255, 255, 1);
+  }
+}
+
+nav a {
+  list-style: none;
+  color: #FFFFFF;
+  font-size: 1.01em;
+  display: inline-block;
+  padding: 0.7em 2em 0.7em 4em;
+  transition: all .3s ease-in-out;
+}
+nav a:hover {
+  color: #0c2461;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.active {
+  color: #0c2461;
+}
+
+.upbox {
+  float: right;
+  width: 90%;
+  height: 100%;
+  margin-top: 1.4em;
+}
+
+.profile, .payment, .subscription, .privacy {
+  transition: opacity .5s ease-in;
+  position: absolute;
+  width: 70%;
+}
+
+h1 {
+  font-family: STKaiti;
+  color: #34495e;
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+h2 {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  margin-left: 2px;
+}
+
+p {
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #0c2461, rgba(12, 36, 97, 0.5)) 1 0%;
+  border-top: 0;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: .7em;
+  padding: 2px 0;
+  color: #070707;
+}
+.noshow {
+  opacity: 0;
+}
