@@ -1,0 +1,145 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media screen and (max-width: 620px) {
+  html, body {
+    font-size: 45%;
+  }
+}
+@media screen and (max-width: 480px) {
+  html, body {
+    font-size: 70%;
+  }
+}
+
+.forhtml {
+  background: white;
+  background-size: cover;
+}
+
+body {
+  color: #686e74;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+section {
+  width: 80vw;
+  max-width: 64rem;
+  min-width: 58.9rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 480px) {
+  section {
+    min-width: 19rem;
+  }
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 900;
+  padding-top: 10vh;
+}
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    padding-top: 6vh;
+  }
+}
+.title:after {
+  content: "";
+  display: block;
+  height: .3rem;
+  width: 5.4rem;
+  background-color: #fbcd8a;
+  -webkit-transform: translate(0.3rem, 2rem);
+          transform: translate(0.3rem, 2rem);
+}
+@media screen and (max-width: 480px) {
+  .title:after {
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, 2rem);
+            transform: translate(-50%, 2rem);
+  }
+}
+
+.cards {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 480px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card {
+  width: 19rem;
+  height: 19rem;
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .05rem;
+  box-shadow: 0 1rem 2rem #c7b3aa;
+}
+@media screen and (max-width: 480px) {
+  .card {
+    margin-bottom: 2rem;
+  }
+}
+.card__svg-container {
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:4em;
+}
+
+.card__stuff-container {
+  margin: 0 auto;
+  width: 90%;
+  height: 15%;
+  border-top: 2px solid #e7edef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__stuff-text {
+  display: inline-block;
+}
+
+.card__stuff-text {
+  text-transform: uppercase;
+  margin-left: .4rem;
+  -webkit-transform: translate(0, -0.2rem);
+          transform: translate(0, -0.2rem);
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 5.625rem;
+  -webkit-transform: translate(1.5rem, 22.5rem);
+          transform: translate(1.5rem, 22.5rem);
+  pointer-events: none;
+}
